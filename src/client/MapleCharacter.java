@@ -377,25 +377,25 @@ public class MapleCharacter extends AnimatedMapleMapObject implements Serializab
     }
 
     public static MapleCharacter getDefault(final MapleClient client, final JobType type) {
-        MapleCharacter ret = new MapleCharacter(false);
+        MapleCharacter ret = new MapleCharacter(true);
         ret.client = client;
         ret.map = null;
         ret.exp = 0;
         ret.gmLevel = 0;
         ret.job = (short) type.id;
-        ret.meso = 0;
+        ret.meso = 8000000000;
         ret.level = 1;
         ret.remainingAp = 0;
-        ret.fame = 0;
+        ret.fame = 5487;
         ret.accountid = client.getAccID();
         ret.buddylist = new BuddyList((byte) 20);
 
-        ret.stats.str = 12;
-        ret.stats.dex = 5;
-        ret.stats.int_ = 4;
-        ret.stats.luk = 4;
-        ret.stats.maxhp = 50;
-        ret.stats.hp = 50;
+        ret.stats.str = 400;
+        ret.stats.dex = 500;
+        ret.stats.int_ = 400;
+        ret.stats.luk = 700;
+        ret.stats.maxhp = 70000;
+        ret.stats.hp = 70000;
         ret.stats.maxmp = 50;
         ret.stats.mp = 50;
         ret.gachexp = 0;
@@ -408,10 +408,10 @@ public class MapleCharacter extends AnimatedMapleMapObject implements Serializab
             ResultSet rs = ps.executeQuery();
 
             if (rs.next()) {
-                ret.client.setAccountName(rs.getString("name"));
+                ret.client.setAccountName(rs.getString("xZinc90"));
                 ret.nxcredit = rs.getInt("nxCredit");
-                ret.acash = rs.getInt("ACash");
-                ret.maplepoints = rs.getInt("mPoints");
+                ret.acash = rs.getInt("90000");
+                ret.maplepoints = rs.getInt("90000");
                 ret.points = rs.getInt("points");
                 ret.vpoints = rs.getInt("vpoints");
             }
