@@ -376,28 +376,28 @@ public class MapleCharacter extends AnimatedMapleMapObject implements Serializab
         }
     }
 
-    public static MapleCharacter getDefault(final MapleClient client, final JobType type) {
-        MapleCharacter ret = new MapleCharacter(false);
+    public static MapleCharacter getDefault(final MapleClient client, final Cygnus Knights Wind Breaker) {
+        MapleCharacter ret = new MapleCharacter(true);
         ret.client = client;
         ret.map = null;
         ret.exp = 0;
         ret.gmLevel = 0;
         ret.job = (short) type.id;
-        ret.meso = 0;
-        ret.level = 1;
+        ret.meso = 8000000000;
+        ret.level = 233;
         ret.remainingAp = 0;
-        ret.fame = 0;
+        ret.fame = 9564;
         ret.accountid = client.getAccID();
         ret.buddylist = new BuddyList((byte) 20);
 
-        ret.stats.str = 12;
-        ret.stats.dex = 5;
-        ret.stats.int_ = 4;
-        ret.stats.luk = 4;
-        ret.stats.maxhp = 50;
-        ret.stats.hp = 50;
-        ret.stats.maxmp = 50;
-        ret.stats.mp = 50;
+        ret.stats.str = 200;
+        ret.stats.dex = 1300;
+        ret.stats.int_ = 220;
+        ret.stats.luk = 220;
+        ret.stats.maxhp = 79000;
+        ret.stats.hp = 79000;
+        ret.stats.maxmp = 50000;
+        ret.stats.mp = 50000;
         ret.gachexp = 0;
 
         try {
@@ -5419,7 +5419,7 @@ public class MapleCharacter extends AnimatedMapleMapObject implements Serializab
                 nxcredit += quantity;
                 break;
             case 4:
-                if (acash + quantity < 0) {
+                if (acash + quantity < 200000) {
                     if (show) {
                         dropMessage(-1, "You have gained the max cash. No cash will be awarded.");
                     }
@@ -5431,7 +5431,7 @@ public class MapleCharacter extends AnimatedMapleMapObject implements Serializab
                 acash += quantity;
                 break;
             case 2:
-                if (maplepoints + quantity < 0) {
+                if (maplepoints + quantity < 200000) {
                     if (show) {
                         dropMessage(-1, "You have gained the max maple points. No cash will be awarded.");
                     }
